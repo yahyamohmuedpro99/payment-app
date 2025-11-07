@@ -1,0 +1,37 @@
+# Core Django
+Django==5.2.8
+djangorestframework==3.16.1
+
+# Database
+psycopg2-binary==2.9.10
+
+# Celery and Redis
+celery==5.5.3
+redis==5.2.1
+
+# Environment variables
+python-decouple==3.8
+
+# CORS headers
+django-cors-headers==4.6.0
+
+# Security
+django-environ==0.11.2
+
+# Testing
+pytest==8.3.4
+pytest-django==4.9.0
+pytest-cov==6.0.0
+factory-boy==3.3.1
+
+# Code quality
+black==24.10.0
+flake8==7.1.1
+isort==5.13.2
+
+# API Documentation
+drf-spectacular==0.28.0
+
+# Utilities
+python-dateutil==2.9.0
+requests==2.32.3
