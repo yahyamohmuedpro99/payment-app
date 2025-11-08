@@ -56,6 +56,13 @@ class Transaction(models.Model):
     def __str__(self):
         return f"{self.payment_key} - {self.status} - {self.amount} {self.currency}"
 
+    def save(self, *args, **kwargs):
+        """Auto-generate payment_key if not provided"""
+        if not self.payment_key:
+            from payment_api.utils import generate_payment_key
+            self.payment_key = generate_payment_key()
+        super().save(*args, **kwargs)
+
     @property
     def is_refundable(self):
         """Check if transaction can be refunded"""
