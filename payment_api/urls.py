@@ -14,6 +14,6 @@ urlpatterns = [
     path('api/auth/', include('authentication.urls')),
     path('api/payments/', include('payments.urls')),
     path('api/transactions/', include('payments.urls')),
-    path('api/refunds/', include(('payments.urls', 'payments'), namespace='refunds')),
+    path('api/refunds/', include('payments.refund_urls')),
     path('api/webhooks/', include('webhooks.urls')),
 ]

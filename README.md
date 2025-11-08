@@ -72,6 +72,12 @@ curl -X POST http://localhost:8000/api/refunds/ \
   -d '{"transaction": "uuid", "amount": "50.00", "reason": "Customer request"}'
 ```
 
+**Get Refund:**
+```bash
+curl http://localhost:8000/api/refunds/{id}/ \
+  -H "Authorization: Token YOUR_TOKEN"
+```
+
 ### Webhooks
 
 **Register Webhook:**
@@ -90,6 +96,13 @@ curl http://localhost:8000/api/webhooks/list/ \
 
 ## Testing
 
+**Quick Test Script (tests all endpoints):**
+```bash
+chmod +x quick_test.sh
+./quick_test.sh
+```
+
+**Run Django Tests:**
 ```bash
 docker-compose exec web python manage.py test
 ```
